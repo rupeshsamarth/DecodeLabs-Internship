@@ -1,0 +1,48 @@
+# AI Recommendation Logic Project
+# DecodeLabs Internship - Project 3
+
+movies = {
+    "Action": [
+        "John Wick",
+        "Mission Impossible",
+        "Mad Max: Fury Road"
+    ],
+    "Comedy": [
+        "The Mask",
+        "Home Alone",
+        "Mr. Bean's Holiday"
+    ],
+    "Sci-Fi": [
+        "Interstellar",
+        "The Matrix",
+        "Inception"
+    ],
+    "Horror": [
+        "The Conjuring",
+        "Insidious",
+        "Annabelle"
+    ],
+    "Romance": [
+        "Titanic",
+        "The Notebook",
+        "La La Land"
+    ]
+}
+
+print("===== AI Recommendation System =====")
+print("\nAvailable Categories:")
+
+for category in movies:
+    print("-", category)
+
+user_choice = input("\nEnter your favorite category: ").strip()
+
+if user_choice in movies:
+    print(f"\nRecommended Movies for {user_choice} Lovers:\n")
+
+    for movie in movies[user_choice]:
+        print("✔", movie)
+
+else:
+    print("\nCategory not found!")
+    print("Please choose from the available categories.")
